@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+  <hibernate-mapping package="com.delphinus.btcalc.beans">
+  	<class name="BTCFixedValues" table="btc_fixed_values" lazy="false">
+  		<id name="id" column="id" type="long">
+  			<generator class="native" />  		
+  		</id>
+  		<property name="btcDifficulty" 		column="btc_difficulty"         type="string"      length="50"     not-null="true"/> 
+  		<property name="blockReward" 		column="block_reward"           type="string"      length="50"     not-null="true"/>
+  		<property name="btcUsDollar" 		column="btc_us_dollar"          type="string"      length="50"     not-null="true"/>  
+  		<property name="lastUpdate"      	column="last_update"            type="timestamp"                   not-null="true"/>
+
+  	</class>  	  	
+  </hibernate-mapping>
